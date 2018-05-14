@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Button } from 'react-native-elements';
+import {Actions} from 'react-native-router-flux';
+
 
 export default class Start extends React.Component {
   render() {
@@ -18,11 +20,11 @@ export default class Start extends React.Component {
         </View>
         <View style = {styles.tail}>
           <Button
-            style = {styles.sign_button_container}
-            onPress = { () => {}}
-            color = '#ffffff'
+            buttonStyle = {styles.sign_button_container}
+            onPress = { () => {Actions.push('signup')}}
+            color = '#9a9c9e'
             fontSize = {25}
-            backgroundColor = '#9a9c9e'
+            backgroundColor = '#e0e0e0'
             title = 'Sign Up'
           />
         </View>        
@@ -35,7 +37,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#ededed',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -59,7 +61,7 @@ const styles = StyleSheet.create({
   
   sign_button_container: {
     width: 200,
-    height: 200,
+    height: 70,
     //backgroundColor: '#ededed',
     borderColor: 'rgb(250,250,250)',
     borderBottomColor: 'rgb(250,250,250)', 

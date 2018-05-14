@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {FormLabel, FormInput, FormValidationMessage, Button } from 'react-native-elements';
+import {Actions,} from 'react-native-router-flux';
 
 export default class SignUp extends React.Component {
   /*  constructor(props) {
@@ -39,8 +40,8 @@ export default class SignUp extends React.Component {
         </View>
         <View style = {styles.tail}>
           <Button 
-            style = {styles.sign_button_container}
-            onPress = { () => {}}
+            buttonStyle = {styles.sign_button_container}
+            onPress = { () => {Actions.push('krName')}}
             color = '#9a9c9e'
             fontSize = {20}
             backgroundColor = 'rgb(224,224,224)'
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     justifyContent: 'flex-end',
-    backgroundColor: '#ededed',
+    backgroundColor: '#fff',
 
   },
 
@@ -87,16 +88,16 @@ const styles = StyleSheet.create({
   next_button_container: {
     width: 300,
     height: 40,
+    borderWidth: 1,
       //backgroundColor: '#ededed',
-    borderColor: 'rgb(0,0,0)',
-    borderBottomColor: 'rgb(0,0,0)',
+    borderColor: '#9a9c9e',
   },
   sign_button_container: {
     width: 200,
-    height: 300,
-      //backgroundColor: '#ededed',
+    height: 70,
+    //backgroundColor: '#ededed',
     borderColor: 'rgb(250,250,250)',
-    borderBottomColor: 'rgb(250,250,250)',
+    //borderBottomColor: 'rgb(250,250,250)',
   }
 })
 

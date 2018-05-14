@@ -10,7 +10,9 @@ import { Router, Stack, Scene } from 'react-native-router-flux';
 const App = () => (
   <Router>
     <Stack key="root" hideNavBar={true}>
-      <Scene key="home" component={KoreanName} initial/>
+      <Scene key="home" component={Start} initial/>
+      <Scene key="signup" component={SignUp}/>
+      <Scene key="krName" component={KoreanName}/>
       <Scene key='person' component={Person} />
     </Stack>
   </Router>

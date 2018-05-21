@@ -51,7 +51,7 @@ export default class SignUp extends React.Component {
       </View>
     
     
-    )
+    );
   }
 }
 

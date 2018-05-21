@@ -29,7 +29,7 @@ export default class KoreanName extends React.Component {
     <View style = {{marginTop: 50, marginBottom: 10,}}>
       <Button 
         buttonStyle = {styles.name_button_container}
-        onPress = {() => {Actions.push('person', { personname: '김철수' })}}
+        onPress = {() => {Actions.push('nameIntro', {personname: '김철수' })}}
         color = '#9a9c9e'
         backgroundColor = 'transparent'
         fontSize = {20}
@@ -39,7 +39,7 @@ export default class KoreanName extends React.Component {
     <View style = {{marginTop: 10, marginBottom: 10,}}>
     <Button 
       buttonStyle = {styles.name_button_container}
-      onPress = {() => {}}
+      onPress = {() => {Actions.push('nameIntro', {personname: '김민영'})}}
       color = '#9a9c9e'
       backgroundColor = 'transparent'
       fontSize = {20}
@@ -49,7 +49,7 @@ export default class KoreanName extends React.Component {
   <View style = {{marginTop: 10, marginBottom: 10,}}>
     <Button 
       buttonStyle = {styles.name_button_container}
-      onPress = {() => {}}
+      onPress = {() => {Actions.push('nameIntro', {personname: '김영희'})}}
       color = '#9a9c9e'
       backgroundColor = 'transparent'
       fontSize = {20}
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   next_button_container: {
-    width: 150,
+    width: 200,
     height: 70,
     justifyContent: 'center',
     borderColor: 'rgb(224,224,224)',

@@ -43,7 +43,7 @@ export default class SignUp extends React.Component {
             buttonStyle = {styles.sign_button_container}
             onPress = { () => {Actions.push('krName')}}
             color = '#9a9c9e'
-            fontSize = {20}
+            fontSize = {25}
             backgroundColor = 'rgb(224,224,224)'
             title = 'NEXT'
           />
@@ -69,35 +69,32 @@ const styles = StyleSheet.create({
 
   head: {
     flex: 2.5,
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
   },
 
   body1: {
-    flex: 2,
+    flex: 1,
   },
   body2: {
-    flex: 7,
+    flex: 5,
     justifyContent: 'flex-start',
     //alignItems: 'center',
   },
 
   tail: {
     flex: 2,
-    //justifyContent: 'flex-start',
+    justifyContent: 'flex-start',
   },
   next_button_container: {
     width: 300,
     height: 40,
     borderWidth: 1,
-      //backgroundColor: '#ededed',
     borderColor: '#9a9c9e',
   },
   sign_button_container: {
     width: 200,
     height: 70,
-    //backgroundColor: '#ededed',
     borderColor: 'rgb(250,250,250)',
-    //borderBottomColor: 'rgb(250,250,250)',
   }
 })
 

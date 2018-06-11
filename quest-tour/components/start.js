@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {Button } from 'react-native-elements';
+import { StyleSheet, Text, View ,TextInput} from 'react-native';
+import {Button} from 'react-native-elements';
 import {Actions} from 'react-native-router-flux';
 
 
@@ -12,11 +12,11 @@ export default class Start extends React.Component {
       <View style = {styles.statusbar}>
       </View>
         <View style = {styles.head}>
-        </View>
-        <View style = {styles.body}>
           <Text style = {{color: '#9a9c9e', fontSize: 40}}>
             Quest Tour
           </Text>
+        </View>
+        <View style = {styles.body}>
         </View>
         <View style = {styles.tail}>
           <Button

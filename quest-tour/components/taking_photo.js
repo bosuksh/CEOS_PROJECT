@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View,} from 'react-native';
+import {StyleSheet, Text, View,TouchableOpacity} from 'react-native';
 import {Icon,Button} from 'react-native-elements';
 import {Actions} from 'react-native-router-flux';
 
@@ -19,14 +19,16 @@ export default class taking_photo_profile extends React.Component {
         </View>
         <View style = {styles.body}>
           <View style = {{flex: 1}}>
+            <TouchableOpacity 
+              onPress = {() => Actions.push('cameraDemo',{personame: this.props.personname})}>
             <Icon
               name = 'ios-camera'
               type = 'ionicon'
               size = {110}
               reverseColor = 'white'
-              onPress = {() => Actions.push('camera_demo')}
 
-          />
+            />
+          </TouchableOpacity>
           </View>
           <View style = {{flex: 1}}>
             <Text style = {{fontSize: 25, color: '#e0e0e0',alignItems: 'center'}}>
@@ -55,7 +57,7 @@ export default class taking_photo_profile extends React.Component {
           <View style = {{flex: 1, alignItems: 'center'}}>
             <Button
               buttonStyle = {styles.buttonContainer}
-              onPress ={() => {Actions.push('takingPhoto',{personname: this.props.personname})}}
+              onPress ={() => {Actions.push('cameraDemo',{personname: this.props.personname})}}
               color = '#9a9c9e'
               fontSize = {15}
               backgroundColor = '#e0e0e0'

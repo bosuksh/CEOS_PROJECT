@@ -27,7 +27,7 @@ export default class App extends Component {
       const data = await this.camera.takePictureAsync(options)
       // console.warn(data.uri);
       this.setState({ preview: data.uri });
-      await CameraRoll.saveToCameraRoll(data.uri);
+      //      await CameraRoll.saveToCameraRoll(data.uri);
     }
   }
 
@@ -43,10 +43,10 @@ export default class App extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.container}>     
         {this.state.preview && 
           <View style = {{flex: 1}}>
-            <Image source={{uri:this.state.preview}}
+           <Image source={{uri:this.state.preview}}
               style = {styles.imageView}/>
             <View style = {styles.buttonContainer}>
               <View style = {{flex: 1}}>
@@ -54,17 +54,20 @@ export default class App extends Component {
                   style = {styles.buttonShape}
                   onPress = {this.backOnPress}
                 >
-                  <Text style = {{fontSize: 10, color: 'black'}}>
+                  <Text style = {{fontSize: 15, color: 'black'}}>
                     back
                   </Text>
                 </TouchableOpacity>
               </View>
               <View style = {{flex: 1}}/>
               <View style = {{flex: 1}}>
-                <TouchableOpacity style = {styles.buttonShape}>
-                  <Text style = {{fontSize: 10, color: 'black'}}>
+                <TouchableOpacity 
+                  style = {styles.buttonShape}
+                  onPress = {() => Actions.push('gameStart',{personname:this.props.personname, profile: this.state.preview})}              >
+                  <Text style = {{fontSize: 15, color: 'black'}}>
                     next
                   </Text>
+
                 </TouchableOpacity> 
               </View>
             </View>}
@@ -143,7 +146,7 @@ const styles = StyleSheet.create({
     margin: 20
   },
   imageView: {
-    flex: 10,
+    flex: 5,
   },
   buttonContainer: {
     flex: 1,
